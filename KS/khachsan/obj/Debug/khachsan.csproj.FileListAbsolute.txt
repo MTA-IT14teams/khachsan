@@ -1,0 +1,40 @@
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\bin\Debug\khachsan.exe.config
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.Form1.resources
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\bin\Debug\Hotel.mdf
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\bin\Debug\Hotel_log.ldf
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\bin\Debug\khachsan.exe
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\bin\Debug\khachsan.pdb
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.exe
+c:\users\administrator\documents\visual studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.pdb
+C:\Users\Administrator\documents\visual studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.Phong.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.Khachhang.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.DoDung.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.ChiTietDoDung.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.ChiTietHDDV.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.DichVu.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.HoaDonDV.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.HoaDonTraPhong.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\khachsan\khachsan\obj\Debug\khachsan.KiemTraDoDung.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\bin\Debug\khachsan.exe.config
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.exe
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.pdb
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\bin\Debug\Hotel.mdf
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\bin\Debug\Hotel_log.ldf
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\bin\Debug\khachsan.exe
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\bin\Debug\khachsan.pdb
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.ChiTietDoDung.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.ChiTietHDDV.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.DichVu.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.DoDung.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.Form1.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.HoaDonDV.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.HoaDonTraPhong.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.Khachhang.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.KiemTraDoDung.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.Phong.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.Properties.Resources.resources
+C:\Users\Administrator\Desktop\TTN-NS\Khachsan\khachsan\KS\khachsan\obj\Debug\khachsan.csproj.GenerateResource.Cache
