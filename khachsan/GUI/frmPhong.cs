@@ -72,5 +72,24 @@ namespace khachsan
         {
             btnGhi_Click(null, null);
         }
+
+        
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+            if (tscboTypeSearch.SelectedIndex == 0)
+            {
+                phongBindingSource.Filter = "MaPhong='" + tstxtKey.Text.Trim() + "'";
+            }
+            else if (tscboTypeSearch.SelectedIndex == 1)
+            {
+                phongBindingSource.Filter = "TenPhong Like'*" + tstxtKey.Text.Trim() + "*'";
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            phongBindingSource.Filter = null;
+        }
     }
 }

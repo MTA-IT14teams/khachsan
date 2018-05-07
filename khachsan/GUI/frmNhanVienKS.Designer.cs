@@ -45,9 +45,18 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhanVienTableAdapter = new khachsan.HotelDataSet1TableAdapters.NhanVienTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnGhiNhan = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDT = new System.Windows.Forms.TextBox();
             this.txtNS = new System.Windows.Forms.TextBox();
@@ -60,15 +69,12 @@
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGhiNhan = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tscboTypeSearch = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.tstxtKey = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -93,13 +99,9 @@
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.bindingNavigator1.BindingSource = this.nhanVienBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -113,7 +115,13 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripLabel1,
+            this.tscboTypeSearch,
+            this.toolStripLabel2,
+            this.tstxtKey,
+            this.toolStripButton2,
+            this.toolStripButton3});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -121,7 +129,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(285, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(833, 27);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -222,6 +230,16 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::khachsan.Properties.Resources.Luu;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -242,6 +260,43 @@
             this.dataGridView1.Size = new System.Drawing.Size(833, 307);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // maNVDataGridViewTextBoxColumn
+            // 
+            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.HeaderText = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            // 
+            // tenNVDataGridViewTextBoxColumn
+            // 
+            this.tenNVDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenNVDataGridViewTextBoxColumn.DataPropertyName = "TenNV";
+            this.tenNVDataGridViewTextBoxColumn.HeaderText = "TenNV";
+            this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
+            // 
+            // gioiTinhDataGridViewTextBoxColumn
+            // 
+            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            // 
+            // cmtDataGridViewTextBoxColumn
+            // 
+            this.cmtDataGridViewTextBoxColumn.DataPropertyName = "Cmt";
+            this.cmtDataGridViewTextBoxColumn.HeaderText = "Cmt";
+            this.cmtDataGridViewTextBoxColumn.Name = "cmtDataGridViewTextBoxColumn";
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            // 
+            // dTDataGridViewTextBoxColumn
+            // 
+            this.dTDataGridViewTextBoxColumn.DataPropertyName = "DT";
+            this.dTDataGridViewTextBoxColumn.HeaderText = "DT";
+            this.dTDataGridViewTextBoxColumn.Name = "dTDataGridViewTextBoxColumn";
             // 
             // nhanVienTableAdapter
             // 
@@ -271,6 +326,26 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(602, 95);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 11;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnGhiNhan
+            // 
+            this.btnGhiNhan.Location = new System.Drawing.Point(602, 32);
+            this.btnGhiNhan.Name = "btnGhiNhan";
+            this.btnGhiNhan.Size = new System.Drawing.Size(75, 23);
+            this.btnGhiNhan.TabIndex = 11;
+            this.btnGhiNhan.Text = "Ghi Nhận";
+            this.btnGhiNhan.UseVisualStyleBackColor = true;
+            this.btnGhiNhan.Click += new System.EventHandler(this.btnGhiNhan_Click);
             // 
             // label6
             // 
@@ -374,72 +449,51 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã NV";
             // 
-            // btnGhiNhan
+            // toolStripLabel1
             // 
-            this.btnGhiNhan.Location = new System.Drawing.Point(602, 32);
-            this.btnGhiNhan.Name = "btnGhiNhan";
-            this.btnGhiNhan.Size = new System.Drawing.Size(75, 23);
-            this.btnGhiNhan.TabIndex = 11;
-            this.btnGhiNhan.Text = "Ghi Nhận";
-            this.btnGhiNhan.UseVisualStyleBackColor = true;
-            this.btnGhiNhan.Click += new System.EventHandler(this.btnGhiNhan_Click);
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(90, 24);
+            this.toolStripLabel1.Text = " Tìm kiếm theo:";
             // 
-            // btnThoat
+            // tscboTypeSearch
             // 
-            this.btnThoat.Location = new System.Drawing.Point(602, 95);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 11;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.button2_Click);
+            this.tscboTypeSearch.Items.AddRange(new object[] {
+            "Mã Nhân Viên",
+            "Tên Nhân Viên"});
+            this.tscboTypeSearch.Name = "tscboTypeSearch";
+            this.tscboTypeSearch.Size = new System.Drawing.Size(121, 27);
+            this.tscboTypeSearch.Text = "Tất cả";
             // 
-            // maNVDataGridViewTextBoxColumn
+            // toolStripLabel2
             // 
-            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
-            this.maNVDataGridViewTextBoxColumn.HeaderText = "MaNV";
-            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(53, 24);
+            this.toolStripLabel2.Text = "Từ khóa:";
             // 
-            // tenNVDataGridViewTextBoxColumn
+            // tstxtKey
             // 
-            this.tenNVDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenNVDataGridViewTextBoxColumn.DataPropertyName = "TenNV";
-            this.tenNVDataGridViewTextBoxColumn.HeaderText = "TenNV";
-            this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
+            this.tstxtKey.Name = "tstxtKey";
+            this.tstxtKey.Size = new System.Drawing.Size(100, 27);
             // 
-            // gioiTinhDataGridViewTextBoxColumn
+            // toolStripButton2
             // 
-            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Text = "Tìm kiếm";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // cmtDataGridViewTextBoxColumn
+            // toolStripButton3
             // 
-            this.cmtDataGridViewTextBoxColumn.DataPropertyName = "Cmt";
-            this.cmtDataGridViewTextBoxColumn.HeaderText = "Cmt";
-            this.cmtDataGridViewTextBoxColumn.Name = "cmtDataGridViewTextBoxColumn";
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            // 
-            // dTDataGridViewTextBoxColumn
-            // 
-            this.dTDataGridViewTextBoxColumn.DataPropertyName = "DT";
-            this.dTDataGridViewTextBoxColumn.HeaderText = "DT";
-            this.dTDataGridViewTextBoxColumn.Name = "dTDataGridViewTextBoxColumn";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::khachsan.Properties.Resources.Luu;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton3.Text = "Làm mới";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // Form1
             // 
@@ -507,6 +561,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cmtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox tscboTypeSearch;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripTextBox tstxtKey;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
 

@@ -65,5 +65,22 @@ namespace khachsan
                 this.Dispose();
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (tscboTypeSearch.SelectedIndex == 0)
+            {
+                doDungBindingSource.Filter = "MaDo='" + tstxtKey.Text.Trim() + "'";
+            }
+            else if(tscboTypeSearch.SelectedIndex==1)
+            {
+                doDungBindingSource.Filter = "TenDo Like '*" + tstxtKey.Text.Trim() + "*'";
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            doDungBindingSource.Filter = null;
+        }
     }
 }

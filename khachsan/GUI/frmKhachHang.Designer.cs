@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachHang));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnGhi = new System.Windows.Forms.Button();
             this.txtMaP = new System.Windows.Forms.TextBox();
             this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hotelDataSet1 = new khachsan.HotelDataSet1();
@@ -75,8 +77,12 @@
             this.ketThucThueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maPhongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khachHangTableAdapter = new khachsan.HotelDataSet1TableAdapters.KhachHangTableAdapter();
-            this.btnGhi = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tscboTypeSearch = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.tstxtKey = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
@@ -114,6 +120,26 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(822, 92);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 18;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnGhi
+            // 
+            this.btnGhi.Location = new System.Drawing.Point(822, 34);
+            this.btnGhi.Name = "btnGhi";
+            this.btnGhi.Size = new System.Drawing.Size(75, 23);
+            this.btnGhi.TabIndex = 18;
+            this.btnGhi.Text = "Ghi";
+            this.btnGhi.UseVisualStyleBackColor = true;
+            this.btnGhi.Click += new System.EventHandler(this.btnGhi_Click);
             // 
             // txtMaP
             // 
@@ -304,7 +330,13 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
+            this.bindingNavigatorDeleteItem,
+            this.toolStripLabel1,
+            this.tscboTypeSearch,
+            this.toolStripLabel2,
+            this.tstxtKey,
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -482,25 +514,52 @@
             // 
             this.khachHangTableAdapter.ClearBeforeFill = true;
             // 
-            // btnGhi
+            // toolStripLabel1
             // 
-            this.btnGhi.Location = new System.Drawing.Point(822, 34);
-            this.btnGhi.Name = "btnGhi";
-            this.btnGhi.Size = new System.Drawing.Size(75, 23);
-            this.btnGhi.TabIndex = 18;
-            this.btnGhi.Text = "Ghi";
-            this.btnGhi.UseVisualStyleBackColor = true;
-            this.btnGhi.Click += new System.EventHandler(this.btnGhi_Click);
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(87, 24);
+            this.toolStripLabel1.Text = "Tìm kiếm theo:";
             // 
-            // btnThoat
+            // tscboTypeSearch
             // 
-            this.btnThoat.Location = new System.Drawing.Point(822, 92);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 18;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.tscboTypeSearch.Items.AddRange(new object[] {
+            "Mã Khách Hàng",
+            "Tên Khách Hàng",
+            "Mã Phòng"});
+            this.tscboTypeSearch.Name = "tscboTypeSearch";
+            this.tscboTypeSearch.Size = new System.Drawing.Size(121, 27);
+            this.tscboTypeSearch.Text = "Tất cả";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(53, 24);
+            this.toolStripLabel2.Text = "Từ khóa:";
+            // 
+            // tstxtKey
+            // 
+            this.tstxtKey.Name = "tstxtKey";
+            this.tstxtKey.Size = new System.Drawing.Size(100, 27);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "Tìm kiếm";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Text = "Làm mới";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // frmKhachHang
             // 
@@ -575,5 +634,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maPhongDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnGhi;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox tscboTypeSearch;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripTextBox tstxtKey;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

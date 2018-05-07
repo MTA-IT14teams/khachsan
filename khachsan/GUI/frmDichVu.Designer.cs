@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDichVu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThoát = new System.Windows.Forms.Button();
+            this.btnGhi = new System.Windows.Forms.Button();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.dichVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hotelDataSet1 = new khachsan.HotelDataSet1();
@@ -57,8 +59,12 @@
             this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dichVuTableAdapter = new khachsan.HotelDataSet1TableAdapters.DichVuTableAdapter();
-            this.btnGhi = new System.Windows.Forms.Button();
-            this.btnThoát = new System.Windows.Forms.Button();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tscboTypeSearch = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.tstxtKey = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dichVuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
@@ -82,10 +88,30 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(28, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(475, 129);
+            this.groupBox1.Size = new System.Drawing.Size(694, 129);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin dịch vụ";
+            // 
+            // btnThoát
+            // 
+            this.btnThoát.Location = new System.Drawing.Point(351, 88);
+            this.btnThoát.Name = "btnThoát";
+            this.btnThoát.Size = new System.Drawing.Size(75, 23);
+            this.btnThoát.TabIndex = 6;
+            this.btnThoát.Text = "Thoát";
+            this.btnThoát.UseVisualStyleBackColor = true;
+            this.btnThoát.Click += new System.EventHandler(this.btnThoát_Click);
+            // 
+            // btnGhi
+            // 
+            this.btnGhi.Location = new System.Drawing.Point(351, 26);
+            this.btnGhi.Name = "btnGhi";
+            this.btnGhi.Size = new System.Drawing.Size(75, 23);
+            this.btnGhi.TabIndex = 6;
+            this.btnGhi.Text = "Ghi";
+            this.btnGhi.UseVisualStyleBackColor = true;
+            this.btnGhi.Click += new System.EventHandler(this.btnGhi_Click);
             // 
             // txtGia
             // 
@@ -156,7 +182,7 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(28, 167);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 203);
+            this.panel1.Size = new System.Drawing.Size(694, 193);
             this.panel1.TabIndex = 1;
             // 
             // bindingNavigator1
@@ -176,7 +202,13 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
+            this.bindingNavigatorDeleteItem,
+            this.toolStripLabel1,
+            this.tscboTypeSearch,
+            this.toolStripLabel2,
+            this.tstxtKey,
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -184,7 +216,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(475, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(694, 25);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -284,9 +316,9 @@
             this.giaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dichVuBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 44);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 34);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(475, 159);
+            this.dataGridView1.Size = new System.Drawing.Size(694, 159);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -313,31 +345,57 @@
             // 
             this.dichVuTableAdapter.ClearBeforeFill = true;
             // 
-            // btnGhi
+            // toolStripLabel1
             // 
-            this.btnGhi.Location = new System.Drawing.Point(351, 26);
-            this.btnGhi.Name = "btnGhi";
-            this.btnGhi.Size = new System.Drawing.Size(75, 23);
-            this.btnGhi.TabIndex = 6;
-            this.btnGhi.Text = "Ghi";
-            this.btnGhi.UseVisualStyleBackColor = true;
-            this.btnGhi.Click += new System.EventHandler(this.btnGhi_Click);
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(87, 22);
+            this.toolStripLabel1.Text = "Tìm kiếm theo:";
             // 
-            // btnThoát
+            // tscboTypeSearch
             // 
-            this.btnThoát.Location = new System.Drawing.Point(351, 88);
-            this.btnThoát.Name = "btnThoát";
-            this.btnThoát.Size = new System.Drawing.Size(75, 23);
-            this.btnThoát.TabIndex = 6;
-            this.btnThoát.Text = "Thoát";
-            this.btnThoát.UseVisualStyleBackColor = true;
-            this.btnThoát.Click += new System.EventHandler(this.btnThoát_Click);
+            this.tscboTypeSearch.Items.AddRange(new object[] {
+            "Mã Dịch Vụ",
+            "Tên Dịch Vụ"});
+            this.tscboTypeSearch.Name = "tscboTypeSearch";
+            this.tscboTypeSearch.Size = new System.Drawing.Size(121, 25);
+            this.tscboTypeSearch.Text = "Tất cả";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(53, 22);
+            this.toolStripLabel2.Text = "Từ khóa:";
+            // 
+            // tstxtKey
+            // 
+            this.tstxtKey.Name = "tstxtKey";
+            this.tstxtKey.Size = new System.Drawing.Size(100, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Tìm kiếm";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Làm mới";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // frmDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 402);
+            this.ClientSize = new System.Drawing.Size(764, 402);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDichVu";
@@ -388,5 +446,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnThoát;
         private System.Windows.Forms.Button btnGhi;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox tscboTypeSearch;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripTextBox tstxtKey;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

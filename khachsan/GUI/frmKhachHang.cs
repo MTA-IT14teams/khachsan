@@ -64,5 +64,26 @@ namespace khachsan
         {
             ActiveControl = this.txtMaKH;
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (tscboTypeSearch.SelectedIndex == 0)
+            {
+                khachHangBindingSource.Filter = "MaKH='" + tstxtKey.Text.Trim() + "'";
+            }
+            else if (tscboTypeSearch.SelectedIndex == 1)
+            {
+                khachHangBindingSource.Filter = "TenKH Like'*" + tstxtKey.Text.Trim() + "*'";
+            }
+            else if (tscboTypeSearch.SelectedIndex == 2)
+            {
+                khachHangBindingSource.Filter = "MaPhong='" + tstxtKey.Text.Trim() + "'";
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            khachHangBindingSource.Filter = null;
+        }
     }
 }

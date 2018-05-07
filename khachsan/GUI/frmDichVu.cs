@@ -63,5 +63,22 @@ namespace khachsan
         {
             ActiveControl = txtMaDV;
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (tscboTypeSearch.SelectedIndex == 0)
+            {
+                dichVuBindingSource.Filter = "MaDV='" + tstxtKey.Text.Trim() + "'";
+            }
+            else if (tscboTypeSearch.SelectedIndex == 1)
+            {
+                dichVuBindingSource.Filter = "TenDV Like'*" + tstxtKey.Text.Trim() + "*'";
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            dichVuBindingSource.Filter = null;
+        }
     }
 }

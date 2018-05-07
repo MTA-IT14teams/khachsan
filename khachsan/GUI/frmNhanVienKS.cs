@@ -80,5 +80,22 @@ namespace khachsan
            // nhanVienBindingSource.AddNew();
             ActiveControl = this.txtMaNV;
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if(tscboTypeSearch.SelectedIndex== 0)
+            {
+               nhanVienBindingSource.Filter = "MaNV='" + tstxtKey.Text.Trim()+"'";
+            }
+            else if(tscboTypeSearch.SelectedIndex==1)
+            {
+                nhanVienBindingSource.Filter = "TenNV Like'*" + tstxtKey.Text.Trim() + "*'";
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            nhanVienBindingSource.Filter = null;
+        }
     }
 }
