@@ -54,17 +54,17 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dichVuTableAdapter = new khachsan.HotelDataSet1TableAdapters.DichVuTableAdapter();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tscboTypeSearch = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.tstxtKey = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dichVuTableAdapter = new khachsan.HotelDataSet1TableAdapters.DichVuTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dichVuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
@@ -78,6 +78,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Turquoise;
             this.groupBox1.Controls.Add(this.btnThoát);
             this.groupBox1.Controls.Add(this.btnGhi);
             this.groupBox1.Controls.Add(this.txtGia);
@@ -88,28 +89,36 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(28, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(694, 129);
+            this.groupBox1.Size = new System.Drawing.Size(747, 149);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin dịch vụ";
             // 
             // btnThoát
             // 
+            this.btnThoát.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoát.Image = ((System.Drawing.Image)(resources.GetObject("btnThoát.Image")));
+            this.btnThoát.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThoát.Location = new System.Drawing.Point(351, 88);
             this.btnThoát.Name = "btnThoát";
-            this.btnThoát.Size = new System.Drawing.Size(75, 23);
+            this.btnThoát.Size = new System.Drawing.Size(75, 45);
             this.btnThoát.TabIndex = 6;
             this.btnThoát.Text = "Thoát";
+            this.btnThoát.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThoát.UseVisualStyleBackColor = true;
             this.btnThoát.Click += new System.EventHandler(this.btnThoát_Click);
             // 
             // btnGhi
             // 
+            this.btnGhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGhi.Image = ((System.Drawing.Image)(resources.GetObject("btnGhi.Image")));
+            this.btnGhi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGhi.Location = new System.Drawing.Point(351, 26);
             this.btnGhi.Name = "btnGhi";
-            this.btnGhi.Size = new System.Drawing.Size(75, 23);
+            this.btnGhi.Size = new System.Drawing.Size(75, 48);
             this.btnGhi.TabIndex = 6;
             this.btnGhi.Text = "Ghi";
+            this.btnGhi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGhi.UseVisualStyleBackColor = true;
             this.btnGhi.Click += new System.EventHandler(this.btnGhi_Click);
             // 
@@ -176,13 +185,14 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.bindingNavigator1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(28, 167);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(694, 193);
+            this.panel1.Size = new System.Drawing.Size(747, 223);
             this.panel1.TabIndex = 1;
             // 
             // bindingNavigator1
@@ -216,7 +226,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(694, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(747, 25);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -306,45 +316,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maDVDataGridViewTextBoxColumn,
-            this.tenDVDataGridViewTextBoxColumn,
-            this.giaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dichVuBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(694, 159);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // maDVDataGridViewTextBoxColumn
-            // 
-            this.maDVDataGridViewTextBoxColumn.DataPropertyName = "MaDV";
-            this.maDVDataGridViewTextBoxColumn.HeaderText = "MaDV";
-            this.maDVDataGridViewTextBoxColumn.Name = "maDVDataGridViewTextBoxColumn";
-            // 
-            // tenDVDataGridViewTextBoxColumn
-            // 
-            this.tenDVDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.HeaderText = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
-            // 
-            // giaDataGridViewTextBoxColumn
-            // 
-            this.giaDataGridViewTextBoxColumn.DataPropertyName = "Gia";
-            this.giaDataGridViewTextBoxColumn.HeaderText = "Gia";
-            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
-            // 
-            // dichVuTableAdapter
-            // 
-            this.dichVuTableAdapter.ClearBeforeFill = true;
-            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
@@ -391,11 +362,53 @@
             this.toolStripButton2.Text = "Làm mới";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maDVDataGridViewTextBoxColumn,
+            this.tenDVDataGridViewTextBoxColumn,
+            this.giaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dichVuBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(744, 195);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // maDVDataGridViewTextBoxColumn
+            // 
+            this.maDVDataGridViewTextBoxColumn.DataPropertyName = "MaDV";
+            this.maDVDataGridViewTextBoxColumn.HeaderText = "MaDV";
+            this.maDVDataGridViewTextBoxColumn.Name = "maDVDataGridViewTextBoxColumn";
+            // 
+            // tenDVDataGridViewTextBoxColumn
+            // 
+            this.tenDVDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.HeaderText = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
+            // 
+            // giaDataGridViewTextBoxColumn
+            // 
+            this.giaDataGridViewTextBoxColumn.DataPropertyName = "Gia";
+            this.giaDataGridViewTextBoxColumn.HeaderText = "Gia";
+            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
+            // 
+            // dichVuTableAdapter
+            // 
+            this.dichVuTableAdapter.ClearBeforeFill = true;
+            // 
             // frmDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 402);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(817, 402);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDichVu";

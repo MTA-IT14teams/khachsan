@@ -89,6 +89,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Aquamarine;
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnGhi);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -107,27 +111,34 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(808, 146);
+            this.groupBox1.Size = new System.Drawing.Size(849, 161);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng";
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(641, 76);
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(641, 86);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(75, 46);
             this.btnThoat.TabIndex = 15;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // btnGhi
             // 
-            this.btnGhi.Location = new System.Drawing.Point(641, 30);
+            this.btnGhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGhi.Image = ((System.Drawing.Image)(resources.GetObject("btnGhi.Image")));
+            this.btnGhi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGhi.Location = new System.Drawing.Point(641, 25);
             this.btnGhi.Name = "btnGhi";
-            this.btnGhi.Size = new System.Drawing.Size(75, 23);
+            this.btnGhi.Size = new System.Drawing.Size(75, 52);
             this.btnGhi.TabIndex = 15;
             this.btnGhi.Text = "Ghi";
+            this.btnGhi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGhi.UseVisualStyleBackColor = true;
             this.btnGhi.Click += new System.EventHandler(this.btnGhi_Click);
             // 
@@ -528,6 +539,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(884, 426);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
