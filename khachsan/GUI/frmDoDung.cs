@@ -44,26 +44,26 @@ namespace khachsan
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.Validate();
-                doDungBindingSource.EndEdit();
-                doDungTableAdapter.Update(hotelDataSet1.DoDung);
-                MessageBox.Show("Đã ghi nhận thông tin thành công");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thất Bại1\n Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //try
+            //{
+            //    this.Validate();
+            //    doDungBindingSource.EndEdit();
+            //    doDungTableAdapter.Update(hotelDataSet1.DoDung);
+            //    MessageBox.Show("Đã ghi nhận thông tin thành công");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Thất Bại1\n Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có thật sự muốn thoát?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-            {
-                this.Dispose();
-            }
+            //if (MessageBox.Show("Bạn có thật sự muốn thoát?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            //{
+            //    this.Dispose();
+            //}
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -82,5 +82,30 @@ namespace khachsan
         {
             doDungBindingSource.Filter = null;
         }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                doDungBindingSource.EndEdit();
+                doDungTableAdapter.Update(hotelDataSet1.DoDung);
+                MessageBox.Show("Đã ghi nhận thông tin thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thất Bại1\n Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thật sự muốn thoát?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
+        }
+
+
     }
 }
