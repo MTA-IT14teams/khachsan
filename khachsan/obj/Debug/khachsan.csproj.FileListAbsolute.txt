@@ -40,3 +40,6 @@ E:\ThucTapNhom\Project\khachsan\khachsan\obj\Debug\khachsan.frmKiemTraDoDung.res
 E:\ThucTapNhom\Project\khachsan\khachsan\obj\Debug\khachsan.frmPhong.resources
 E:\ThucTapNhom\Project\khachsan\khachsan\obj\Debug\khachsan.csprojResolveAssemblyReference.cache
 E:\ThucTapNhom\Project\khachsan\khachsan\obj\Debug\khachsan.GUI.frmLogin.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\khach san de day mau\khachsan\khachsan\bin\Debug\khachsan.exe.config
+E:\Nam_3_Kỳ2\Thuctapnhom\khach san de day mau\khachsan\khachsan\obj\Debug\khachsan.exe
+E:\Nam_3_Kỳ2\Thuctapnhom\khach san de day mau\khachsan\khachsan\obj\Debug\khachsan.pdb
