@@ -24,23 +24,6 @@ namespace khachsan
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            try
-            {
-                dataGridView1.CurrentRow.Selected = true;
-            }
-            catch
-            {
-
-            }
-        }
-
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
