@@ -904,8 +904,8 @@ namespace khachsan.HotelDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[NhanVien] ([MaNV], [TenNV], [GioiTinh], [Cmt], [NgaySinh], [DT" +
-                "]) VALUES (@MaNV, @TenNV, @GioiTinh, @Cmt, @NgaySinh, @DT);\r\nSELECT MaNV, TenNV," +
-                " GioiTinh, Cmt, NgaySinh, DT FROM NhanVien WHERE (MaNV = @MaNV)";
+                "]) VALUES (@MaNV, @TenNV, @GioiTinh, @Cmt, @NgaySinh, @DT);\nSELECT MaNV, TenNV, " +
+                "GioiTinh, Cmt, NgaySinh, DT FROM NhanVien WHERE (MaNV = @MaNV)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaNV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaNV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenNV", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenNV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
