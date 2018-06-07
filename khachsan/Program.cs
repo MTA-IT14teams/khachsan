@@ -19,15 +19,15 @@ namespace khachsan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            try
-            {
+            //try
+            //{
                 cnn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
                 cnn.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hãy sửa lại connect string trong Program.cs");
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Hãy sửa lại connect string trong Program.cs");
+            //}
             Application.Run(new frmMain());
         }
     }
