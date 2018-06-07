@@ -21,7 +21,7 @@ namespace khachsan
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                cnn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\ThucTapNhom\Project\khachsan\khachsan\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+                cnn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
                 cnn.Open();
             }
             catch (Exception ex)

@@ -24,20 +24,19 @@ namespace khachsan
 
         }
 
-
         private void btnGhi_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 this.Validate();
                 doDungBindingSource.EndEdit();
                 doDungTableAdapter.Update(hotelDataSet1.DoDung);
                 MessageBox.Show("Đã ghi nhận thông tin thành công");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thất Bại1\n Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Thất Bại1\n Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
         }
 
