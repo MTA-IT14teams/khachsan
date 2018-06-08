@@ -7,37 +7,90 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace khachsan
 {
     public partial class frmDoDung : Form
     {
+        public static SqlConnection conn;
         public frmDoDung()
         {
             InitializeComponent();
         }
+        private bool trangthai = true;
+        public void Mo_txt()
+        {
+            txtMaDD.Enabled = true;
+            txtTenDD.Enabled = true;
+            txtGia.Enabled = true;
+        }
+        public void Khoa_txt()
+        {
+            //các txt khóa, ko cho nhập 
+            txtMaDD.Enabled = false;
+            txtTenDD.Enabled = false;
+            txtGia.Enabled = false;
+        }
 
+        public void Null()
+        {
+            txtMaDD.Text = "";
+            txtTenDD.Text = "";
+            txtGia.Text = "";
+        }
+        private void Load_DoDung()
+        {
+
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            SqlDataAdapter daDoDung = new SqlDataAdapter("select MaDo, TenDo, Gia from DoDung ", conn);
+            DataTable dtDoDung = new DataTable();
+            daDoDung.Fill(dtDoDung);
+            dataGridView1.DataSource = dtDoDung;
+        }
         private void DoDung_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hotelDataSet1.DoDung' table. You can move, or remove it, as needed.
-            this.doDungTableAdapter.Fill(this.hotelDataSet1.DoDung);
-
+            //this.doDungTableAdapter.Fill(this.hotelDataSet1.DoDung);
+            Load_DoDung();
+            btnGhi.Enabled = false;
+            Khoa_txt();
         }
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-                this.Validate();
-                doDungBindingSource.EndEdit();
-                doDungTableAdapter.Update(hotelDataSet1.DoDung);
-                MessageBox.Show("Đã ghi nhận thông tin thành công");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Thất Bại1\n Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            if (trangthai == true)
+            {               
+                SqlCommand cmd = new SqlCommand("ThemDo", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p = new SqlParameter("@ma", txtMaDD.Text);
+                cmd.Parameters.Add(p);
+                p = new SqlParameter("@ten", txtTenDD.Text);
+                cmd.Parameters.Add(p);
+                p = new SqlParameter("@gia", txtGia.Text);
+                cmd.Parameters.Add(p);
+                cmd.ExecuteNonQuery();
+                Load_DoDung();
+                btn_Sua.Enabled = true;
+            }
+            else if(trangthai == false)
+            {
+                SqlCommand cmd = new SqlCommand("SuaDo", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p = new SqlParameter("@ma", txtMaDD.Text);
+                cmd.Parameters.Add(p);
+                p = new SqlParameter("@ten", txtTenDD.Text);
+                cmd.Parameters.Add(p);
+                p = new SqlParameter("@gia", txtGia.Text);
+                cmd.Parameters.Add(p);
+                cmd.ExecuteNonQuery();
+                Load_DoDung();
+                btnThem.Enabled = true;
+            }
+            Khoa_txt();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -48,21 +101,66 @@ namespace khachsan
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            if (tscboTypeSearch.SelectedIndex == 0)
+            Mo_txt();
+            Null();
+            trangthai = true;
+            btnGhi.Enabled = true;
+            btn_Sua.Enabled = false;
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            Mo_txt();
+            btnGhi.Enabled = true;
+            trangthai = false;
+            btnThem.Enabled = false;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {           
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                doDungBindingSource.Filter = "MaDo='" + tstxtKey.Text.Trim() + "'";
-            }
-            else if(tscboTypeSearch.SelectedIndex==1)
-            {
-                doDungBindingSource.Filter = "TenDo Like '*" + tstxtKey.Text.Trim() + "*'";
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("XoaDo", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter p = new SqlParameter("@ma", txtMaDD.Text);
+                    cmd.Parameters.Add(p);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Xóa thành công!");
+                    Load_DoDung();                 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi" + ex.Message);
+                }
             }
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            doDungBindingSource.Filter = null;
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                txtMaDD.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["MaDD"].Value);
+                txtTenDD.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["TenDD"].Value);
+                txtGia.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["Gia"].Value);                
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                txtMaDD.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["MaDD"].Value);
+                txtTenDD.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["TenDD"].Value);
+                txtGia.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["Gia"].Value);
+
+            }
         }
     }
 }
