@@ -45,11 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.doDungTableAdapter = new khachsan.HotelDataSet1TableAdapters.DoDungTableAdapter();
             this.MaDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.doDungTableAdapter = new khachsan.HotelDataSet1TableAdapters.DoDungTableAdapter();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doDungBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
@@ -63,6 +65,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.groupBox1.Controls.Add(this.txtTimKiem);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btn_Sua);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnThem);
@@ -76,7 +80,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(769, 142);
+            this.groupBox1.Size = new System.Drawing.Size(769, 175);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đồ dùng";
@@ -225,25 +229,10 @@
             this.dataGridView1.DataSource = this.doDungBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(769, 166);
+            this.dataGridView1.Size = new System.Drawing.Size(769, 114);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(12, 153);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(769, 172);
-            this.panel1.TabIndex = 1;
-            // 
-            // doDungTableAdapter
-            // 
-            this.doDungTableAdapter.ClearBeforeFill = true;
             // 
             // MaDD
             // 
@@ -264,6 +253,39 @@
             this.Gia.DataPropertyName = "Gia";
             this.Gia.HeaderText = "Giá";
             this.Gia.Name = "Gia";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(12, 205);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(769, 120);
+            this.panel1.TabIndex = 1;
+            // 
+            // doDungTableAdapter
+            // 
+            this.doDungTableAdapter.ClearBeforeFill = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tìm kiếm";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doDungBindingSource, "Gia", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtTimKiem.Location = new System.Drawing.Point(118, 142);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(144, 20);
+            this.txtTimKiem.TabIndex = 11;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // frmDoDung
             // 
@@ -308,5 +330,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label4;
     }
 }

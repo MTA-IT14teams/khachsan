@@ -13,6 +13,7 @@ namespace khachsan
 {
     public partial class frmDoDung : Form
     {
+        DataTable dt;
         public static SqlConnection conn;
         public frmDoDung()
         {
@@ -45,9 +46,9 @@ namespace khachsan
             conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\Hotel.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             SqlDataAdapter daDoDung = new SqlDataAdapter("select MaDo, TenDo, Gia from DoDung ", conn);
-            DataTable dtDoDung = new DataTable();
-            daDoDung.Fill(dtDoDung);
-            dataGridView1.DataSource = dtDoDung;
+            dt = new DataTable();
+            daDoDung.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
         private void DoDung_Load(object sender, EventArgs e)
         {
@@ -161,6 +162,12 @@ namespace khachsan
                 txtGia.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["Gia"].Value);
 
             }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string tenncc = string.Format("[TenDo] like '%{0}%'", txtTimKiem.Text);
+            dt.DefaultView.RowFilter = tenncc;
         }
     }
 }
