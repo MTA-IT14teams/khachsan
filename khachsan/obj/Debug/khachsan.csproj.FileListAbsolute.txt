@@ -65,3 +65,25 @@ E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\obj\Debug
 E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\obj\Debug\khachsan.frmPhong.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\obj\Debug\khachsan.Properties.Resources.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\Project de day len GitHub\khachsan\khachsan\obj\Debug\khachsan.csproj.GenerateResource.Cache
+D:\Năm3moi\khachsan\khachsan\bin\Debug\khachsan.exe.config
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.exe
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.pdb
+D:\Năm3moi\khachsan\khachsan\bin\Debug\Hotel.mdf
+D:\Năm3moi\khachsan\khachsan\bin\Debug\Hotel_log.ldf
+D:\Năm3moi\khachsan\khachsan\bin\Debug\khachsan.exe
+D:\Năm3moi\khachsan\khachsan\bin\Debug\khachsan.pdb
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.csprojResolveAssemblyReference.cache
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmMain.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmChiTietDoDung.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmChiTietHDDV.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmDichVu.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmDoDung.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.GUI.frmLogin.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.Form1.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.HoaDonDV.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmHoaDonTraPhong.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmKhachHang.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmKiemTraDoDung.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.frmPhong.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.Properties.Resources.resources
+D:\Năm3moi\khachsan\khachsan\obj\Debug\khachsan.csproj.GenerateResource.Cache
