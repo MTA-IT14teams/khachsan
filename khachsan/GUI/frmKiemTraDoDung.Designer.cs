@@ -101,7 +101,7 @@
             this.txtThanhTien.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kiemTraDoDungBindingSource, "ThanhTien", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtThanhTien.Location = new System.Drawing.Point(349, 70);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(100, 20);
+            this.txtThanhTien.Size = new System.Drawing.Size(117, 20);
             this.txtThanhTien.TabIndex = 7;
             // 
             // kiemTraDoDungBindingSource
@@ -117,9 +117,9 @@
             // txtSLDaDung
             // 
             this.txtSLDaDung.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kiemTraDoDungBindingSource, "SLDaDung", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtSLDaDung.Location = new System.Drawing.Point(349, 37);
+            this.txtSLDaDung.Location = new System.Drawing.Point(349, 38);
             this.txtSLDaDung.Name = "txtSLDaDung";
-            this.txtSLDaDung.Size = new System.Drawing.Size(100, 20);
+            this.txtSLDaDung.Size = new System.Drawing.Size(117, 20);
             this.txtSLDaDung.TabIndex = 6;
             // 
             // MaDD
