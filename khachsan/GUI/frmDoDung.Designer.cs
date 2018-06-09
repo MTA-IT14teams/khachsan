@@ -31,14 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoDung));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_XuatExcel = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.doDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSet1 = new khachsan.HotelDataSet1();
+            this.label4 = new System.Windows.Forms.Label();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnGhi = new System.Windows.Forms.Button();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.doDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hotelDataSet1 = new khachsan.HotelDataSet1();
             this.txtTenDD = new System.Windows.Forms.TextBox();
             this.txtMaDD = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,8 +53,6 @@
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.doDungTableAdapter = new khachsan.HotelDataSet1TableAdapters.DoDungTableAdapter();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doDungBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
@@ -65,6 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.groupBox1.Controls.Add(this.btn_XuatExcel);
             this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btn_Sua);
@@ -80,17 +82,59 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(769, 175);
+            this.groupBox1.Size = new System.Drawing.Size(754, 175);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đồ dùng";
+            // 
+            // btn_XuatExcel
+            // 
+            this.btn_XuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XuatExcel.Image = ((System.Drawing.Image)(resources.GetObject("btn_XuatExcel.Image")));
+            this.btn_XuatExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_XuatExcel.Location = new System.Drawing.Point(565, 74);
+            this.btn_XuatExcel.Name = "btn_XuatExcel";
+            this.btn_XuatExcel.Size = new System.Drawing.Size(85, 52);
+            this.btn_XuatExcel.TabIndex = 12;
+            this.btn_XuatExcel.Text = "Xuất Excel";
+            this.btn_XuatExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_XuatExcel.UseVisualStyleBackColor = true;
+            this.btn_XuatExcel.Click += new System.EventHandler(this.btn_XuatExcel_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doDungBindingSource, "Gia", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtTimKiem.Location = new System.Drawing.Point(118, 142);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(144, 20);
+            this.txtTimKiem.TabIndex = 11;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // doDungBindingSource
+            // 
+            this.doDungBindingSource.DataMember = "DoDung";
+            this.doDungBindingSource.DataSource = this.hotelDataSet1;
+            // 
+            // hotelDataSet1
+            // 
+            this.hotelDataSet1.DataSetName = "HotelDataSet1";
+            this.hotelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tìm kiếm";
             // 
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua.Image")));
             this.btn_Sua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Sua.Location = new System.Drawing.Point(565, 20);
+            this.btn_Sua.Location = new System.Drawing.Point(565, 16);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(75, 52);
             this.btn_Sua.TabIndex = 9;
@@ -162,16 +206,6 @@
             this.txtGia.Size = new System.Drawing.Size(144, 20);
             this.txtGia.TabIndex = 5;
             // 
-            // doDungBindingSource
-            // 
-            this.doDungBindingSource.DataMember = "DoDung";
-            this.doDungBindingSource.DataSource = this.hotelDataSet1;
-            // 
-            // hotelDataSet1
-            // 
-            this.hotelDataSet1.DataSetName = "HotelDataSet1";
-            this.hotelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // txtTenDD
             // 
             this.txtTenDD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doDungBindingSource, "TenDo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -229,7 +263,7 @@
             this.dataGridView1.DataSource = this.doDungBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(769, 114);
+            this.dataGridView1.Size = new System.Drawing.Size(754, 114);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -262,37 +296,19 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(12, 205);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(769, 120);
+            this.panel1.Size = new System.Drawing.Size(754, 120);
             this.panel1.TabIndex = 1;
             // 
             // doDungTableAdapter
             // 
             this.doDungTableAdapter.ClearBeforeFill = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Tìm kiếm";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doDungBindingSource, "Gia", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtTimKiem.Location = new System.Drawing.Point(118, 142);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(144, 20);
-            this.txtTimKiem.TabIndex = 11;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
             // frmDoDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(889, 337);
+            this.ClientSize = new System.Drawing.Size(794, 337);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDoDung";
@@ -332,5 +348,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_XuatExcel;
     }
 }
